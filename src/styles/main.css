@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+ 
+ 
+/*
+  AppBar
+*/
+ 
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h2 {
+  color: green;
+  text-transform: uppercase;
+  font-size: 20px;
+  user-select: none;
+}
+ 
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.app-bar__navigation ul li  a:hover {
+  color: #37e557; /* Warna teks saat dihover */
+  transition: color 0.4s ease, font-weight 0.3s ease;
+}
+
+
+/* Jumbotron styles */
+.jumbotron {
+  padding: 5rem;
+  margin-bottom: 0;
+  background-image: url('../public/images/heros/hero-image_4.jpg'); /* Ganti dengan path yang sesuai */
+  background-position: center;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 3.5em;
+  color: rgba(250, 252, 250, 0.767); 
+  
+}
+
+.jumbotron p {
+  font-size: 1.5em;
+  color: rgba(254, 255, 254, 0.911); 
+}
+ 
+/*
+  Main Content
+*/
+ 
+main {
+  padding: 32px;
+  flex: 1;
+}
+ 
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+ 
+.content .content__heading {
+  font-weight: normal;
+}
+ 
+ 
+/*
+  restaurant
+*/
+ 
+.restaurant {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+ 
+ 
+/*
+  restaurant Item
+*/
+ 
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+.restaurant-item__header {
+  position: relative;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+ 
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+ 
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+ 
+.restaurant-item .restaurant-item__content h3 a {
+  color: green;
+  text-decoration: none;
+}
+ 
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+ 
+ 
+/*
+  restaurant
+*/
+ 
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+ 
+.restaurant .restaurant__poster {
+  width: 100%;
+  max-width: 400px;
+}
+ 
+.restaurant .restaurant__info h4 {
+  margin: 8px 0;
+}
+ 
+ 
+ 
+
+/* Footer styles */
+#footer {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.f-content i:hover{
+  background: green;
+  color: white;
+  border-radius: 5px;
+}
+.text-light{
+  font-size: 1rem;
+}
+.c-content {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.c-content a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+/* cardresto */
+.main-resto_container {
+  margin: 60px auto;
+  font-size: 28px;
+  color: #333; /* Warna teks yang lembut */
+  background-color: #f8f9fa; /* Warna latar belakang yang bersih */
+  padding: 15px; /* Padding yang cukup untuk memberikan ruang di sekitar teks */
+  margin-bottom: 30px;
+}
+
+.main-resto_label {
+  margin: auto;
+  width: max-content;
+  font-size: 28px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-resto_label hr {
+  margin-top: 0;
+  width: 50%;
+  border-bottom: 1px solid green;
+}
+
+.list-resto {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Menentukan 3 kolom sejajar */
+  grid-gap: 16px;
+}
+
+.resto-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  transition: top ease 0.4s;
+  cursor: pointer;
+  max-width: 400px;
+  width: 100%;  /* Mengatur lebar card menjadi 100% */
+}
+
+
+.resto-item:hover {
+  top: -4px;
+}
+
+.resto-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resto-item a {
+  text-decoration: none; /* Menghapus underline dari tautan */
+  color: black; /* Mengubah warna teks menjadi hitam */
+}
+
+.resto-item_image {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 0 0;
+}
+
+.resto-item_city,
+.resto-item_rating,
+.resto-item_name,
+.resto-item_desc {
+  padding: 0 16px;
+
+}
+
+.resto-item_city {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.resto-item_rating {
+  color: black;
+  text-decoration: none;
+  margin: 0 0 0 5px;
+  padding: 2px 3px;
+  border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.resto-item_name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.resto-item_name:hover {
+  opacity: 0.7;
+}
+
+.resto-item_desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  color: rgb(16, 16, 16);
+  padding: 8px;
+  z-index: 100;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-image: linear-gradient(45deg, #58db34, #2c3e50);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+ 
+.skip-link:focus {
+   top: 0;
+ 
+}
